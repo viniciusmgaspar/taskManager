@@ -1,0 +1,41 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            Int     @id @default(autoincrement())
+  name          String
+  email         String  @unique
+  password      String
+  createdTasks  Task[]  @relation("CreatedTasks")    // tarefas criadas pelo usuário
+  viewableTasks Task[]  @relation("TaskViewers")    // tarefas que o usuário pode visualizar
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Task {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?
+  status      Status    @default(PENDING)
+  dueDate     DateTime?
+
+  creatorId   Int
+  creator     User      @relation("CreatedTasks", fields: [creatorId], references: [id])
+
+  viewers     User[]    @relation("TaskViewers")    // muitos-para-muitos
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+enum Status {
+  PENDING
+  IN_PROGRESS
+  DONE
+}

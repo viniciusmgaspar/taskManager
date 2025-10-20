@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+/* filter select */
+.tasks-container select {
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  color: #111827;
+}
+.app {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 16px;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.nav a {
+  text-decoration: none;
+  color: #0369a1;
+}
+.auth {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+.auth input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+.tasks {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+}
+.task {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 0;
+}
+.task h3 {
+  margin: 0;
+}
+.error {
+  color: #b91c1c;
+}
+
+/* Tasks table layout and responsive centering */
+.tasks-container {
+  max-width: 1100px;
+  margin: 0 auto; /* center horizontally */
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tasks-table th,
+.tasks-table td {
+  padding: 8px 12px;
+  text-align: left;
+}
+.tasks-table thead th {
+  background: #f3f4f6;
+}
+
+.truncate-desc {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Button styles used in tasks */
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 8px;
+}
+.btn-secondary {
+  background: #6b7280;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.btn-info {
+  background: #0ea5e9;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn-warning {
+  background: #f59e0b;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn-danger {
+  background: #ef4444;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+@media (max-width: 640px) {
+  .tasks-container {
+    padding: 8px;
+  }
+  .tasks-table td {
+    padding: 8px 6px;
+  }
+  .truncate-desc {
+    max-width: 120px;
+  }
+  .btn-primary,
+  .btn-secondary {
+    padding: 6px 8px;
+  }
+}
