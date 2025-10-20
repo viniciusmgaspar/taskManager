@@ -89,6 +89,7 @@ Contribuições e novas sugestões são sempre bem-vindas! 🙌
 
 ## 🔹 Funcionalidades Planejadas
 
+- Implementar testes de unidade e E2E
 - Implementar **paginação** na listagem de tarefas  
 - Adicionar **novos filtros** (por título e conteúdo da descrição)  
 - Melhorar as **mensagens de erro** exibidas ao usuário  
