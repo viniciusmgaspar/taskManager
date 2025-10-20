@@ -56,5 +56,7 @@ Esta aplicação web fullstack permite o gerenciamento de tarefas, oferecendo fu
 1. Clone o repositório:
 
 ```bash
-git clone <link-do-repositorio>
-cd <nome-do-projeto>
+git clone https://github.com/viniciusmgaspar/taskManager.git
+cd taskManage
+docker compose up --build -d
+```
